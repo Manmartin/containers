@@ -16,7 +16,7 @@ namespace ft
             typedef Pointer     pointer;
             typedef Reference   reference;
             typedef Category    iterator_category;
-            virtual ~iterator();
+            virtual ~iterator() {}
     };
 
     /* Iterator traits */
