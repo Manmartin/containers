@@ -99,12 +99,23 @@ namespace ft
             /* Iterator functions */
             iterator    begin( void ) { return iterator(_Ptr); }
             iterator    end( void ) { return iterator(_Ptr + _Size); }
+            const_iterator    begin( void ) const { return iterator(_Ptr); }
+            const_iterator    end( void ) const { return iterator(_Ptr + _Size); }
 
             /* Capacity functions */
             size_type size( void ) const { return _Size; }
             size_type max_size( void ) const { return _Alloc.max_size(); }
             size_type capacity( void ) const { return _Cap; }
+            void resize ( size_type n, value_type val = value_type() ) {
+                (void)val;
+                if (n <= _Size) {
+                    _Size = n;
 
+                }
+                else {
+                    
+                }
+            }
 
         private:
             allocator_type  _Alloc;
